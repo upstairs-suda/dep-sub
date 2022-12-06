@@ -8,6 +8,6 @@ class StoreService
 {
     public function toDisplayName(IStore $store): string
     {
-        return $store->getName() . ' / ' . $store->getAddress();
+        return '[ ' . $store->getName() . ' / ' . $store->getAddress() . ' ]';
     }
 }
