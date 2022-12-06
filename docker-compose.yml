@@ -10,7 +10,7 @@ services:
       - MARIADB_DATABASE=depsub
     ports:
       - "${DB_PORT:-19306}:3306"
-  myapp:
+  depsub:
     image: docker.io/bitnami/laravel:9
     ports:
       - '8098:8000'
@@ -20,6 +20,6 @@ services:
       - DB_USERNAME=depsub_user
       - DB_DATABASE=depsub
     volumes:
-      - './src:/app'
+      - './:/app'
     depends_on:
       - mariadb
