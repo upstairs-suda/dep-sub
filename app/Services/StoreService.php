@@ -10,6 +10,7 @@ class StoreService
     public function toDisplayName(IStore $store): string
     {
         $string = '[ ' . $store->getName() . ' / ' . $store->getAddress() . ' ]';
+        $string .= ' (staging)';
         return Strings::padLeft($string, length: 3, pad: '^');
     }
 }
